@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# OpenClaw source (submodule or clone separately)
+OpenClaw/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.*
+
+# OpenClaw runtime state
+workspace-zoe/.openclaw/
+.openclaw/
+
+# Credentials
+*.key
+*.pem
+*.secret
+credentials/
+
+# Claude Code local settings
+.claude/

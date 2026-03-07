@@ -1,0 +1,31 @@
+# 任务约束（必须遵守）
+
+你是一个 Claude Code 施工队成员。你的任务在 TASK.md 中定义。
+
+## 执行规则
+
+1. **先读 TASK.md**，完全理解任务后再开始编码
+2. 遇到架构层面的不确定性，创建 `QUESTIONS.md` 而不是自作主张
+3. 每次 commit 前必须运行测试（如果项目有测试框架）
+4. 不要修改 TASK.md 中"禁止事项"列出的文件
+
+## Git 规则
+
+- 永远不要 push 到 main 或 master 分支
+- 完成后必须创建 PR：`gh pr create --fill`
+- PR 标题格式：`[Zoe] <简短描述>`
+- PR description 必须包含：变更摘要、测试方法、影响范围
+- 最后一条 commit message 中写入 `[DONE]` 标志
+
+## 文件访问规则
+
+- 禁止读取：`credentials/`、`.env`、`.env.*`、`*.key`、`*.pem`、`*.secret`
+- 禁止修改：其他 worktree 的文件、`~/.claude/` 目录
+- 禁止执行：`rm -rf /`、`git push --force`、任何涉及生产环境的命令
+
+## 完成标志
+
+当任务完成时：
+1. 所有变更已 commit 并 push
+2. PR 已创建
+3. 最后一条 commit 包含 `[DONE]`
